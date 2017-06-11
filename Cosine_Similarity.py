@@ -71,6 +71,7 @@ def main(df, k, user_id):
     #計算誤差
     print("rmse : " + str(rmse(test_data_matrix, prediction_matrix)))
 
+    #列出預測評分最高的10個 id
     if user_id >= 0:
         print("top recommendation : " + str(np.argsort(prediction_matrix[user_id])[-1:(-1-10):-1]))
 
